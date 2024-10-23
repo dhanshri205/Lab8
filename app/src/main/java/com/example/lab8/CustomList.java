@@ -71,6 +71,7 @@ public class CustomList extends ArrayAdapter<City> {
      *  If city is not in the lis then throws and error.
      */
     public void delete(City city){
+        cities.remove(city);
     }
 
 }
