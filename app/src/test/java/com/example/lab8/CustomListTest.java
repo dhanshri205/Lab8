@@ -42,5 +42,14 @@ public class CustomListTest {
         list.addCity(city);
         assertTrue(list.hasCity(city), "Citylist should contain Victoria");
     }
+    @Test
+    void testDeleteCity(){
+        list = MockCityList();
+        City city = new City("Denver", "Colorado");
+        list.addCity(city);
+        assertEquals(1, list.getCount());
+        list.delete(city);
+        assertEquals(0, list.getCount());
+    }
 
 }
